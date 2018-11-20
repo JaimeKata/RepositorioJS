@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio RGB</title>
+</head>
+<body>
+	<textarea id="text-area">
+		-RGB-
+		RGB(255,127,2) 
+		RGB(0,255,120) 
+		RGB(0,-2,45) 
+		RGB(123, 45, 2) 
+		RGB(234. 22, 11)
+	</textarea>
+	<input type="button" value="Cambiar" onclick="conseguirRgb()">
+	<script type="text/javascript">
+		var colores=["RGB(255,127,2)"];
+		//, "RGB(0,255,120)", "RGB(0,-2,45)", "RGB(123, 45, 2)", "RGB(234. 22, 11)"];
+		var patron = /RGB\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/;
+		function conseguirRgb(colores, patron){
+			for(var i = 0; i < colores.length; i ++){
+				var color = colores[i];
+				var valido = color.test(patron);
+				if(valido == true){
+					var colorRva = color.replace(/RGB/i, "RVA");
+
+				}
+			}
+		}
+	</script>
+	
+</body>
+</html>
